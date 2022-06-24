@@ -17,6 +17,9 @@ const Navbar = () => {
         <NavLink to='Contacto'  className ="link-dark" id="enlace">
             Contactanos
         </NavLink>
+        <NavLink to='NuevoVehiculo'  className ="link-dark" id="enlace">
+        Nuevo Vehiculo
+        </NavLink>
       </div>
   </nav>
     

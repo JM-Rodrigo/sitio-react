@@ -1,8 +1,10 @@
 import React from 'react'
-
+import {Link} from "react-router-dom";
 const Vehiculos = () => {
   return (
-    <div>Vehiculos</div>
+    <>
+      <h1>VEHICULO</h1>
+    </>
   )
 }
 
