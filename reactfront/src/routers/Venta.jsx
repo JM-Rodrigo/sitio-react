@@ -46,7 +46,7 @@ const Venta = () => {
     <>
       <div className="container mt-2">
         <div className="title">
-          <h1>CRUD</h1>
+          <h1>VEHICULOS TESJI</h1>
         </div>
     
         <div className="row">

@@ -20,7 +20,7 @@ const NuevoVehiculo = () => {
       nombre: nombre,
       marca: marca,
       modelo: modelo,
-      precio: precio
+      precio: precio,
     });
     navigate("/Venta");
   };
@@ -39,7 +39,7 @@ const NuevoVehiculo = () => {
             alt="Responsive image"
           />
           <form onSubmit={store}>
-            <div className="mb-3 mt-4">
+            <div className="mb-3 mt-5">
               <label className="form-label">Nombre : </label>
               <input
                 value={nombre}
@@ -50,7 +50,7 @@ const NuevoVehiculo = () => {
                 required
               />{" "}
             </div>
-            <div className="mb-3">
+            <div className="mb-3 mt-5">
               <label className="form-label">Marca : </label>
               <input
                 value={marca}
@@ -61,7 +61,7 @@ const NuevoVehiculo = () => {
                 required
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-3 mt-5">
               <label className="form-label">Modelo : </label>
               <input
                 value={modelo}
@@ -72,7 +72,7 @@ const NuevoVehiculo = () => {
                 required
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-3 mt-5">
               <label className="form-label">Precio : </label>
               <input
                 value={precio}
@@ -83,12 +83,14 @@ const NuevoVehiculo = () => {
                 required
               />
             </div>
-            <button type="submit" className="btn btn-primary">
-              Guardar
-            </button>
-            <Link to="/Venta" className="btn btn-danger mx-2">
-              Cancelar
-            </Link>
+            <div className="mb-3 mt-5">
+              <button type="submit" className="btn btn-primary ">
+                Guardar
+              </button>
+              <Link to="/Venta" className="btn btn-danger mx-2">
+                Cancelar
+              </Link>
+            </div>
           </form>
         </div>
       </div>
