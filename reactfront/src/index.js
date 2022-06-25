@@ -22,7 +22,7 @@ root.render(
         <Route path='Venta' element={<Venta />}/>
         <Route path='Contacto' element={<Contacto />}/>
         <Route path='NuevoVehiculo' element={<NuevoVehiculo/>}/>
-        <Route path='EditarVehiculo' element={<EditarVehiculo/>}/>
+        <Route path='/EditarVehiculo/:id' element={<EditarVehiculo/>}/>
       </Route>
     </Routes> 
   </BrowserRouter>

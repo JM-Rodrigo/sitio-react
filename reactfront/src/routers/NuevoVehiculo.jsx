@@ -1,56 +1,83 @@
-import React from 'react'
-import {Link} from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+const URI = "http://localhost:8000/autos/";
+
 const NuevoVehiculo = () => {
+  const [nombre, setNombre] = useState("");
+  const [marca, setMarca] = useState("");
+  const [modelo, setModelo] = useState("");
+  const [precio, setPrecio] = useState("");
+
+  const navigate = useNavigate();
+
+  //Procedimiento de guardar
+  const store = async (e) => {
+    e.preventDefault();
+    await axios.post(URI, {
+      nombre: nombre,
+      marca: marca,
+      modelo: modelo,
+      precio: precio
+    });
+    navigate("/Venta");
+  };
+
   return (
-    
     <div className="container">
-      
       <div className="row">
         <div className="col">
           <div className="title">
             <h1>AÑADE UN NUEVO VEHICULO</h1>
-          </div><img
+          </div>
+          <img
             //src={logo_1}
             aria-hidden
             className="img-fluid"
-            alt="Responsive image"/>
-          <form 
-          //onSubmit={store}
-          >
+            alt="Responsive image"
+          />
+          <form onSubmit={store}>
             <div className="mb-3 mt-4">
               <label className="form-label">Nombre : </label>
               <input
-                //value={Nombre}
-                //onChange={(e) => setNombre(e.target.value)}
+                value={nombre}
+                onChange={(e) => setNombre(e.target.value)}
                 type="text"
                 className="form-control"
                 placeholder="Ingresa el nombre del vehiculo"
-                required/> </div>
+                required
+              />{" "}
+            </div>
             <div className="mb-3">
               <label className="form-label">Marca : </label>
               <input
-                //value={Marca}
-                //onChange={(e) => setMarca(e.target.value)}
+                value={marca}
+                onChange={(e) => setMarca(e.target.value)}
                 type="text"
                 className="form-control"
                 placeholder="Ingresa la marca del vehiculo"
-                required/></div>
+                required
+              />
+            </div>
             <div className="mb-3">
               <label className="form-label">Modelo : </label>
               <input
-                //value={Modelo}
-                //onChange={(e) => setModelo(e.target.value)}
+                value={modelo}
+                onChange={(e) => setModelo(e.target.value)}
                 type="text"
                 className="form-control"
                 placeholder="Ingresa el modelo del vehiculo"
-                required/>
+                required
+              />
             </div>
             <div className="mb-3">
               <label className="form-label">Precio : </label>
               <input
-                //value={Modelo}
-                //onChange={(e) => setModelo(e.target.value)}
-                type="text"
+                value={precio}
+                onChange={(e) => setPrecio(e.target.value)}
+                type="number"
                 className="form-control"
                 placeholder="Ingresa el Precio del vehiculo"
                 required
@@ -59,14 +86,14 @@ const NuevoVehiculo = () => {
             <button type="submit" className="btn btn-primary">
               Guardar
             </button>
-            <Link to="/" className="btn btn-danger mx-2">
+            <Link to="/Venta" className="btn btn-danger mx-2">
               Cancelar
             </Link>
           </form>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NuevoVehiculo
+export default NuevoVehiculo;
