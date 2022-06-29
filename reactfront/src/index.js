@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Inicio from './routers/Inicio'
 import Vehiculos from './routers/Vehiculos'
 import Venta from './routers/Venta'
-import Contacto from './routers/Contacto'
 import NuevoVehiculo from './routers/NuevoVehiculo';
 import EditarVehiculo from './routers/EditarVehiculo';
 
@@ -20,7 +19,6 @@ root.render(
         <Route index element={<Inicio/>}/>
         <Route path='Vehiculos' element={<Vehiculos />}/>
         <Route path='Venta' element={<Venta />}/>
-        <Route path='Contacto' element={<Contacto />}/>
         <Route path='NuevoVehiculo' element={<NuevoVehiculo/>}/>
         <Route path='/EditarVehiculo/:id' element={<EditarVehiculo/>}/>
       </Route>
