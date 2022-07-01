@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import Swal from 'sweetalert2';
+import logo from '../images/logo_1.png'
+
 
 const URI = 'http://localhost:8000/autos/'
 const Venta = () => {
@@ -46,13 +48,11 @@ const Venta = () => {
     <>
       <div className="container mt-2">
         <div className="title">
-          <h1>VEHICULOS TESJI</h1>
+          <h3>VEHICULOS TESJI</h3>
         </div>
-    
+        <img  src={logo} aria-hidden className='img-fluid' alt='Responsive image' />
         <div className="row">
           <div className="col mt-2">
-            
-           
             <table className="table table-borderless mt-4">
               <thead>
                 <tr>

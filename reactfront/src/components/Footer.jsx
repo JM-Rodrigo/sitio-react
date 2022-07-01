@@ -19,8 +19,7 @@ const Footer = () => {
             <i class="fas fa-gem me-3"></i>Tesji Vehiculos
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+          Vender las mejores unidades en excelentes condiciones estéticas y mecánicas y con toda la documentación al día y en regla.
           </p>
         </div>
         

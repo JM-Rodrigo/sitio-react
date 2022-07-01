@@ -21,4 +21,9 @@ code {
   font-size: 140%;
   font-family: Arial;
   font-style: bold;
-} 
+}
+.title{
+  text-align: center;
+  margin: 1rem;
+
+}

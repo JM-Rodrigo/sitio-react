@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import logo from '../images/logo.png'
+
 
 const URI = "http://localhost:8000/autos/";
 
@@ -27,17 +29,12 @@ const NuevoVehiculo = () => {
 
   return (
     <div className="container">
+       <div className="title">
+            <h3>AÑADE UN NUEVO VEHICULO</h3>
+        </div>
+      <img  src={logo} aria-hidden className='img-fluid' alt='Responsive image' />
       <div className="row">
         <div className="col">
-          <div className="title">
-            <h1>AÑADE UN NUEVO VEHICULO</h1>
-          </div>
-          <img
-            //src={logo_1}
-            aria-hidden
-            className="img-fluid"
-            alt="Responsive image"
-          />
           <form onSubmit={store}>
             <div className="mb-3 mt-5">
               <label className="form-label">Nombre : </label>
